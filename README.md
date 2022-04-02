@@ -8,3 +8,5 @@ This is a project to modelled Boss direct hire
 
 > Frontui is establish for this project base on the theme of boss,
 here, you can apply the same style anywhere. 
+what more is that you I will publish Frontui on npm
+
