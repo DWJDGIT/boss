@@ -1,0 +1,71 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  min-height: 100%;
+  overflow: visible;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  a {
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+      color: #00d7c6;
+      text-decoration: none;
+      -webkit-transition: all linear 0.2s;
+      transition: all linear 0.2s;
+    }
+  }
+}
+
+::selection{background:#00d7c6;color:#FFF;}
+::-moz-selection{background:#00d7c6;color:#FFF;}
+.inner {
+  width: 1184px;
+  &::after {
+    content: '';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+  }
+}
+.home-inner {
+  max-width: 1184px;
+}
+.inner {
+  width: 1184px;
+  margin: 0 auto;
+}
+
+.nav,
+.user-nav {
+  font-size: 0;
+  float: left;
+  margin-left: 15px;
+  height: 49px;
+  line-height: 49px;
+  ul {
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: top;
+    li {
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+      font-size: 14px;
+      margin: 0 7px;
+    }
+  }
+}
+
+.user-nav,
+.user-block {
+  display: inline-block;
+  font-size: 13px;
+}
+
+#boss-app{
+  height: 100%;
+}
