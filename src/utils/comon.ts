@@ -5,14 +5,16 @@
 function shake(fn: any, wait: number) {
   let timeOut: any
   wait = wait || 500
-  return function() {
-    if (timeOut) clearTimeout(timeOut)
+  return function () {
+    if (timeOut) {
+      clearTimeout(timeOut)
+      timeOut = null
+    }
     timeOut = setTimeout(() => {
       fn.apply(null)
     }, wait)
   }
 }
-
 
 // 节流 保证一定时间内只调用一次(规定时间内，事件只允许发生一次)
 // 1. 提交表单，防止用户高频点击
@@ -20,8 +22,8 @@ function shake(fn: any, wait: number) {
 
 function throttle(event: any, time: number) {
   let timer: any = null
-  return function(){
-    if(!timer) {
+  return function () {
+    if (!timer) {
       timer = setTimeout(() => {
         event()
         timer = null
@@ -32,8 +34,4 @@ function throttle(event: any, time: number) {
 
 // 节流 -- 时间戳
 
-
-export {
-  shake,
-  throttle
-}
+export { shake, throttle }
